@@ -47,10 +47,10 @@ app.post('/paystack-webhook', async (req, res) => {
     // Retrieve the request's body
     const event = req.body
     // Do something with the event ...
-  }
 
-  // You can log to the console to be sure
-  console.log('The Paystack webhook was called')
+    // You can log to the console to be sure
+    console.log('The webhook was called with event:', event)
+  }
 
   // A status response of 200 must be sent back to the Paystack 
   res.status(200).json({
